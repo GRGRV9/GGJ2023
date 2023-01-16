@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 2f;
 
     private Rigidbody2D rb;
 
@@ -11,10 +11,10 @@ public class MovementController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        float moveX = moveSpeed;
+        float moveY = 0;
 
         rb.velocity = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
     }
