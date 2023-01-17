@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void NewGame()
+    public GameObject gameobject;
+
+    IEnumerator Fade()
     {
+        gameobject.SetActive(false);
+        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
+    }
+
+    public void NewGame()
+    {   
+        StartCoroutine(Fade());
+        
     }
 
     public void QuitGame()
