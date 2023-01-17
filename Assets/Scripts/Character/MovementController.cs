@@ -39,5 +39,17 @@ public class MovementController : MonoBehaviour
             moveSpeed = startSpeed;
             print(moveSpeed);
         }
+
+        if (Input.GetKeyUp("d"))
+        {
+            Dying();
+        }
+    }
+
+    public void Dying()
+    {
+        moveSpeed = 0.01f;
+        animator.SetBool("isDead", true);
+        print("Dying");
     }
 }
