@@ -6,6 +6,8 @@ public class SpellController : MonoBehaviour
 {
     private OrbStash orbStash;
     private Animator animator;
+    public Transform firePoint;
+    public GameObject fireBallPrefab;
 
     void Start()
     {
@@ -101,7 +103,7 @@ public class SpellController : MonoBehaviour
 
     void FireFireFire()
     {
-        print("FireFireFire");
+        Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
     }
 
     void IceIceIce()
