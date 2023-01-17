@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public float speed = 10f;
+    public float lifetime = 1.5f;
     public Rigidbody2D rb;
 
     void Start()
@@ -16,7 +17,7 @@ public class Fireball : MonoBehaviour
 
     IEnumerator BlowTimer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
 
