@@ -23,6 +23,7 @@ public class SpellController : MonoBehaviour
 
     void InvokeSpell()
     {
+        animator.CrossFade("spellcast", 0.01f);
         int fireOrbsCount = 0;
         int iceOrbsCount = 0;
         int earthOrbsCount = 0;
@@ -96,7 +97,6 @@ public class SpellController : MonoBehaviour
     void StopSpelling()
     {
         animator.SetBool("isCasting", false);
-        print("Stop");
     }
 
     void FireFireFire()
