@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpellController : MonoBehaviour
 {
-    public OrbStash orbStash;
+    private OrbStash orbStash;
+    private Animator animator;
 
     void Start()
     {
         orbStash = gameObject.GetComponent<OrbStash>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,6 +26,8 @@ public class SpellController : MonoBehaviour
         int fireOrbsCount = 0;
         int iceOrbsCount = 0;
         int earthOrbsCount = 0;
+
+        animator.SetBool ("isCasting", true);
         foreach (var item in orbStash.orbStash)
         {
             if (item=="Fire")
@@ -87,6 +91,12 @@ public class SpellController : MonoBehaviour
                 FireIceEarth();
             }
         }
+    }
+
+    void StopSpelling()
+    {
+        animator.SetBool("isCasting", false);
+        print("Stop");
     }
 
     void FireFireFire()
