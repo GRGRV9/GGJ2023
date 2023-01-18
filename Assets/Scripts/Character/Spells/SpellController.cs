@@ -8,6 +8,8 @@ public class SpellController : MonoBehaviour
     private Animator animator;
     public Transform firePoint;
     public GameObject fireBallPrefab;
+    public GameObject iceBallPrefab;
+    public GameObject rockPrefab;
 
     void Start()
     {
@@ -118,12 +120,12 @@ public class SpellController : MonoBehaviour
 
     void FireFireIce()
     {
-        print("FireFireIce");
+        Instantiate(iceBallPrefab, firePoint.position, firePoint.rotation);
     }
 
     void FireFireEarth()
     {
-        print("FireFireEarth");
+        Instantiate(rockPrefab, firePoint.position, firePoint.rotation);
     }
 
     void FireIceIce()

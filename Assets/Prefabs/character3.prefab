@@ -713,6 +713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6019694450549943517}
   fireBallPrefab: {fileID: 5220156062370548888, guid: 5377b7edf52a47f4a8d8f69de62188ec, type: 3}
+  iceBallPrefab: {fileID: 5409518994912484298, guid: 87838b49d7e7349498dfb492430d2824, type: 3}
+  rockPrefab: {fileID: 7823629515744424569, guid: 422c48765c8a3c840bf81e3fa15cc4be, type: 3}
 --- !u!1 &4519168985260581029
 GameObject:
   m_ObjectHideFlags: 0
