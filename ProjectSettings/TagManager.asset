@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ice
   - earth
+  - fire
   layers:
   - Default
   - TransparentFX
