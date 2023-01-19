@@ -25,6 +25,7 @@ public class Bonfire : MonoBehaviour
             bon4.SetActive(false);
             isActive = false;
             Debug.Log("bonfire deactivated");
+            Destroy(collision.gameObject);
         }
         
     }
