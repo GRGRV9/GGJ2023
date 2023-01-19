@@ -19,14 +19,18 @@ public class Bonfire : MonoBehaviour
 
         if (collision.gameObject.tag == "ice")
         {
-            bon1.SetActive(false);
-            bon2.SetActive(false);
-            bon3.SetActive(false);
-            bon4.SetActive(false);
-            isActive = false;
-            Debug.Log("bonfire deactivated");
+            BreakBonfire();
             Destroy(collision.gameObject);
         }
         
+    }
+    public void BreakBonfire()
+    {
+        bon1.SetActive(false);
+        bon2.SetActive(false);
+        bon3.SetActive(false);
+        bon4.SetActive(false);
+        isActive = false;
+        Debug.Log("bonfire deactivated");
     }
 }
