@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    public GameObject deathSound;
 
     void Start()
     {
@@ -51,5 +52,6 @@ public class MovementController : MonoBehaviour
         moveSpeed = 0.01f;
         animator.SetBool("isDead", true);
         print("Dying");
+        deathSound.GetComponent<AudioSource>().Play();
     }
 }
