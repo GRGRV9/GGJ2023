@@ -15,6 +15,9 @@ public class SpellController : MonoBehaviour
     public GameObject iceBallPrefab;
     public GameObject rockPrefab;
 
+    private MovementController movementController;
+    private bool isDead;
+
     void Start()
     {
         orbStash = gameObject.GetComponent<OrbStash>();
@@ -22,11 +25,13 @@ public class SpellController : MonoBehaviour
 
         audioSource = firePointObject.GetComponent<AudioSource>();
         firePoint = firePointObject.GetComponent<Transform>();
+        movementController = GetComponent<MovementController>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        isDead = movementController.IsDead();
+        if (Input.GetKeyDown("space") && isDead==false)
         {
             InvokeSpell();
         }
