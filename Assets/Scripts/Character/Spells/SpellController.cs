@@ -6,7 +6,11 @@ public class SpellController : MonoBehaviour
 {
     private OrbStash orbStash;
     private Animator animator;
-    public Transform firePoint;
+
+    public GameObject firePointObject;
+    private AudioSource audioSource;
+    private Transform firePoint;
+
     public GameObject fireBallPrefab;
     public GameObject iceBallPrefab;
     public GameObject rockPrefab;
@@ -15,6 +19,9 @@ public class SpellController : MonoBehaviour
     {
         orbStash = gameObject.GetComponent<OrbStash>();
         animator = GetComponent<Animator>();
+
+        audioSource = firePointObject.GetComponent<AudioSource>();
+        firePoint = firePointObject.GetComponent<Transform>();
     }
 
     void Update()
@@ -33,6 +40,7 @@ public class SpellController : MonoBehaviour
         int earthOrbsCount = 0;
 
         animator.SetBool ("isCasting", true);
+        audioSource.Play();
         foreach (var item in orbStash.orbStash)
         {
             if (item=="Fire")
