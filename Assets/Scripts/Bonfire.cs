@@ -9,9 +9,16 @@ public class Bonfire : MonoBehaviour
     public GameObject bon2;
     public GameObject bon3;
     public GameObject bon4;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.tag == "Player" && isActive==true)
         {
             collision.gameObject.GetComponent<MovementController>().Dying();
@@ -32,5 +39,6 @@ public class Bonfire : MonoBehaviour
         bon4.SetActive(false);
         isActive = false;
         Debug.Log("bonfire deactivated");
+        audioSource.Play();
     }
 }

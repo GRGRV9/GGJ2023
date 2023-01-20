@@ -34,7 +34,6 @@ public class MovementController : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed * moveSpeed, jumpSpeed * moveSpeed);
 
         animator.SetFloat("speed", moveSpeed);
-        Debug.Log(isGrounded);
         isGrounded = false;
         animator.SetBool("isGrounded", isGrounded);
     }
@@ -73,7 +72,6 @@ public class MovementController : MonoBehaviour
         {
             isGrounded = true;
             animator.SetBool("isGrounded", isGrounded);
-            Debug.Log(collision.gameObject.name);
         }
     }
 

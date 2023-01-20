@@ -6,10 +6,12 @@ public class IceWall : MonoBehaviour
 {
     private bool isActive = true;
     private Animator animator;
+    private AudioSource audioSource;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,5 +33,6 @@ public class IceWall : MonoBehaviour
         animator.enabled = true;
         isActive = false;
         Debug.Log("icewall deactivated");
+        audioSource.Play();
     }
 }

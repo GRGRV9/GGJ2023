@@ -14,6 +14,7 @@ public class SpellController : MonoBehaviour
     public GameObject fireBallPrefab;
     public GameObject iceBallPrefab;
     public GameObject rockPrefab;
+    public IntroScript introScript;
 
     private MovementController movementController;
     private bool isDead;
@@ -119,6 +120,7 @@ public class SpellController : MonoBehaviour
     void FireFireFire()
     {
         Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
+        introScript.StopTraining1();
     }
 
     void IceIceIce()
@@ -134,6 +136,7 @@ public class SpellController : MonoBehaviour
     void FireFireIce()
     {
         Instantiate(iceBallPrefab, firePoint.position, firePoint.rotation);
+        introScript.StopTraining2();
     }
 
     void FireFireEarth()
