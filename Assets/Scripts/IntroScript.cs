@@ -10,10 +10,6 @@ public class IntroScript : MonoBehaviour
     public GameObject Training1UI;
     public GameObject Training2UI;
 
-    public bool fireballCasted;
-    public bool training1Completed;
-
-    public bool iceballCasted;
     public bool training2Completed;
 
     // Start is called before the first frame update
@@ -24,6 +20,8 @@ public class IntroScript : MonoBehaviour
         Training1UI.SetActive(false);
         Training2UI.SetActive(false);
 
+        training2Completed = false;
+
         StartCoroutine(Intro());
         StartCoroutine(Training1());        
     }
@@ -33,8 +31,10 @@ public class IntroScript : MonoBehaviour
         StopCoroutine(Training1());
         Training1UI.SetActive(false);
         Time.timeScale = 1;
-
-        StartCoroutine(Training2());       
+        if (training2Completed==false)
+        {
+            StartCoroutine(Training2());
+        }             
     }
 
     public void StopTraining2()
@@ -67,6 +67,7 @@ public class IntroScript : MonoBehaviour
 
     IEnumerator Training2()
     {
+        training2Completed = true;
         Debug.Log("Training2");
         yield return new WaitForSeconds(4);
         Training2UI.SetActive(true);
