@@ -5,11 +5,14 @@ using UnityEngine;
 public class Geyser : MonoBehaviour
 {
     private bool isActive;
+    private AudioSource audioSource;
 
     private void Start()
     {
         isActive = true;
         StartCoroutine(DestroyTimer());
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
