@@ -3567,6 +3567,14 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 984184576}
+    - target: {fileID: 7502014660604381992, guid: a2de665c097d72d46bb38af05759d695, type: 3}
+      propertyPath: training1Screen
+      value: 
+      objectReference: {fileID: 1839489602}
+    - target: {fileID: 7502014660604381992, guid: a2de665c097d72d46bb38af05759d695, type: 3}
+      propertyPath: training2Screen
+      value: 
+      objectReference: {fileID: 393179609}
     - target: {fileID: 7502014660604382007, guid: a2de665c097d72d46bb38af05759d695, type: 3}
       propertyPath: m_Mass
       value: 50
