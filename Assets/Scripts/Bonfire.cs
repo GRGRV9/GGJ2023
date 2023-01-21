@@ -26,11 +26,11 @@ public class Bonfire : MonoBehaviour
 
         if (collision.gameObject.tag == "ice")
         {
-            BreakBonfire();
             if (isActive)
             {
                 Destroy(collision.gameObject);
-            }            
+            }
+            BreakBonfire();                      
         }
         
     }

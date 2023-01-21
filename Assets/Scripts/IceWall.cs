@@ -23,11 +23,11 @@ public class IceWall : MonoBehaviour
 
         if (collision.gameObject.tag == "earth")
         {
-            BreakIcewall();
             if (isActive)
             {
                 Destroy(collision.gameObject);
             }
+            BreakIcewall();            
         }
 
     }
