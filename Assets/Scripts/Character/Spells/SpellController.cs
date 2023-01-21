@@ -132,7 +132,7 @@ public class SpellController : MonoBehaviour
 
     void IceIceIce()
     {
-        print("IceIceIce");
+        movementController.Dash();
     }
 
     void EarthEarthEarth()

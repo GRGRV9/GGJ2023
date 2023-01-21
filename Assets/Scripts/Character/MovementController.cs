@@ -96,6 +96,11 @@ public class MovementController : MonoBehaviour
         StartCoroutine(JumpingProcess());
     }
 
+    public void Dash()
+    {
+        StartCoroutine(DashProcess());
+    }
+
     public bool IsDead()
     {
         return isDead;
@@ -110,5 +115,14 @@ public class MovementController : MonoBehaviour
         jumpSpeed = 0;
         isJumping = false;
         animator.SetBool("isJumping", isJumping);
+    }
+
+    IEnumerator DashProcess()
+    {
+        moveSpeed = startSpeed * 3;
+        animator.SetBool("isDashing", true);
+        yield return new WaitForSeconds(0.2f);
+        moveSpeed = startSpeed;
+        animator.SetBool("isDashing", false);
     }
 }
