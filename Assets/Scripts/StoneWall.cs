@@ -24,9 +24,11 @@ public class StoneWall : MonoBehaviour
         if (collision.gameObject.tag == "fire")
         {
             BreakStonewall();
-            Destroy(collision.gameObject);
+            if (isActive)
+            {
+                Destroy(collision.gameObject);
+            }           
         }
-
     }
     public void BreakStonewall()
     {
