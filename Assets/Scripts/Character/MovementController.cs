@@ -74,6 +74,7 @@ public class MovementController : MonoBehaviour
             animator.SetBool("isGrounded", isGrounded);
         }
     }
+    
 
     public void Dying()
     {
@@ -97,10 +98,10 @@ public class MovementController : MonoBehaviour
 
     IEnumerator JumpingProcess()
     {
-        jumpSpeed = Mathf.Lerp(10,0,0.32f);
+        jumpSpeed = Mathf.Lerp(10,0,0.3f);
         isJumping = true;
         animator.SetBool("isJumping", isJumping);
-        yield return new WaitForSeconds(0.32f);
+        yield return new WaitForSeconds(0.3f);
         jumpSpeed = 0;
         isJumping = false;
         animator.SetBool("isJumping", isJumping);
