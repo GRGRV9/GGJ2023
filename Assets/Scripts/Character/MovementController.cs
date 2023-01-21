@@ -16,6 +16,8 @@ public class MovementController : MonoBehaviour
     private bool isGrounded;
 
     public GameObject gameOverScreen;
+    public GameObject training1Screen;
+    public GameObject training2Screen;
 
     void Start()
     {
@@ -84,6 +86,9 @@ public class MovementController : MonoBehaviour
         print("Dying");
         deathSound.GetComponent<AudioSource>().Play();
         gameOverScreen.SetActive(true);
+        training1Screen.SetActive(false);
+        training2Screen.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Jumping()

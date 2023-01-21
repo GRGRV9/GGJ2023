@@ -3573,7 +3573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7502014660604382007, guid: a2de665c097d72d46bb38af05759d695, type: 3}
       propertyPath: m_GravityScale
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7502014661284665321, guid: a2de665c097d72d46bb38af05759d695, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4539,9 +4539,6 @@ MonoBehaviour:
   iceWall: {fileID: 1303179382}
   Training1UI: {fileID: 1839489602}
   Training2UI: {fileID: 393179609}
-  fireballCasted: 0
-  training1Completed: 0
-  iceballCasted: 0
   training2Completed: 0
 --- !u!1 &1700061094
 GameObject:

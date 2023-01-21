@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IntroScript : MonoBehaviour
@@ -24,6 +23,11 @@ public class IntroScript : MonoBehaviour
 
         StartCoroutine(Intro());
         StartCoroutine(Training1());        
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void StopTraining1()
