@@ -282,7 +282,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4476191689892256651}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7279758968951028868
 AudioSource:
@@ -464,6 +464,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3510993915136470715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8186560070770012305}
+  m_Layer: 0
+  m_Name: GroundPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8186560070770012305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3510993915136470715}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.73, y: -3.75, z: -9.985583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4476191689892256651}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3691324745257142005
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,8 +625,9 @@ Transform:
   - {fileID: 7629546264028404516}
   - {fileID: 2795406460578840811}
   - {fileID: 7502014661284665321}
-  - {fileID: 6019694450549943517}
   - {fileID: 2503007753021595533}
+  - {fileID: 6019694450549943517}
+  - {fileID: 8186560070770012305}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -712,9 +744,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePointObject: {fileID: 7820968772266170219}
+  groundCastObject: {fileID: 3510993915136470715}
   fireBallPrefab: {fileID: 5220156062370548888, guid: 5377b7edf52a47f4a8d8f69de62188ec, type: 3}
   iceBallPrefab: {fileID: 5409518994912484298, guid: 87838b49d7e7349498dfb492430d2824, type: 3}
   rockPrefab: {fileID: 7823629515744424569, guid: 422c48765c8a3c840bf81e3fa15cc4be, type: 3}
+  geyserPrefab: {fileID: 5564930450872687902, guid: 6069fd7154fcda044b0e440c68485cf0, type: 3}
+  introScript: {fileID: 0}
 --- !u!82 &1382704991741231076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1345,7 +1380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4476191689892256651}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &969680069954387874
 AudioSource:

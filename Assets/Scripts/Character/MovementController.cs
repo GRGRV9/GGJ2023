@@ -98,7 +98,7 @@ public class MovementController : MonoBehaviour
 
     IEnumerator JumpingProcess()
     {
-        jumpSpeed = Mathf.Lerp(10,0,0.3f);
+        jumpSpeed = Mathf.Lerp(15,0,0.3f);
         isJumping = true;
         animator.SetBool("isJumping", isJumping);
         yield return new WaitForSeconds(0.3f);

@@ -7,13 +7,19 @@ public class SpellController : MonoBehaviour
     private OrbStash orbStash;
     private Animator animator;
 
-    public GameObject firePointObject;
     private AudioSource audioSource;
+
+    public GameObject firePointObject;
     private Transform firePoint;
+    public GameObject groundCastObject;
+    private Transform groundCastPoint;
 
     public GameObject fireBallPrefab;
     public GameObject iceBallPrefab;
     public GameObject rockPrefab;
+    public GameObject geyserPrefab;
+
+
     public IntroScript introScript;
 
     private MovementController movementController;
@@ -23,8 +29,9 @@ public class SpellController : MonoBehaviour
     {
         orbStash = gameObject.GetComponent<OrbStash>();
         animator = GetComponent<Animator>();
-
         audioSource = firePointObject.GetComponent<AudioSource>();
+
+        groundCastPoint = groundCastObject.GetComponent<Transform>();
         firePoint = firePointObject.GetComponent<Transform>();
         movementController = GetComponent<MovementController>();
     }
@@ -146,7 +153,7 @@ public class SpellController : MonoBehaviour
 
     void FireIceIce()
     {
-        print("FireIceIce");
+        Instantiate(geyserPrefab, groundCastPoint.position, groundCastPoint.rotation);
     }
 
     void IceIceEarth()
