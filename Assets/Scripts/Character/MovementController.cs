@@ -119,7 +119,7 @@ public class MovementController : MonoBehaviour
 
     IEnumerator DashProcess()
     {
-        moveSpeed = startSpeed * 3;
+        moveSpeed = startSpeed * 2.5f;
         animator.SetBool("isDashing", true);
         yield return new WaitForSeconds(0.2f);
         moveSpeed = startSpeed;
