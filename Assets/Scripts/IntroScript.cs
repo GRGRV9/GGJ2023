@@ -76,6 +76,7 @@ public class IntroScript : MonoBehaviour
 
     public void WinLevel()
     {
+        Debug.Log("Win!");
         WinGameUI.SetActive(true);
         Time.timeScale = 0;
     }
