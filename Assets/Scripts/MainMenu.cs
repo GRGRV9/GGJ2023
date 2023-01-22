@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
     public GameObject gameobject;
     int currentSceneIndex;
 
+    private void Start()
+    {
+        Debug.Log(currentSceneIndex = SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     IEnumerator Fade(int scene)
     {
@@ -31,6 +36,6 @@ public class MainMenu : MonoBehaviour
     public void NextLevel()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(Fade(currentSceneIndex++));
+        StartCoroutine(Fade(currentSceneIndex+1));
     }
 }

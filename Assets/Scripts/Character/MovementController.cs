@@ -19,6 +19,8 @@ public class MovementController : MonoBehaviour
     public GameObject training1Screen;
     public GameObject training2Screen;
 
+    bool isInputBlocked = false;
+
     void Start()
     {
         isJumping = false;
@@ -40,28 +42,38 @@ public class MovementController : MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
     }
 
+    public void BlockInput()
+    {
+        isInputBlocked = true;
+    }
+
+    public void UnblockInput()
+    {
+        isInputBlocked = false;
+    }
+
     private void Update()
     {
         if (isDead == false)
         {
-            if (Input.GetKeyDown("s"))
+            if (Input.GetKeyDown("s") && isInputBlocked ==false)
             {
                 moveSpeed = 0f;
                 print(moveSpeed);
             }
 
-            if (Input.GetKeyUp("s"))
+            if (Input.GetKeyUp("s") && isInputBlocked == false)
             {
                 moveSpeed = startSpeed;
                 print(moveSpeed);
             }
 
-            if (Input.GetKeyUp("d"))
+            if (Input.GetKeyUp("d") && isInputBlocked == false)
             {
                 Dying();
             }
 
-            if (Input.GetKeyUp("j"))
+            if (Input.GetKeyUp("j") && isInputBlocked == false)
             {
                 Jumping();
             }

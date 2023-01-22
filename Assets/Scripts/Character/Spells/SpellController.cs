@@ -25,6 +25,8 @@ public class SpellController : MonoBehaviour
     private MovementController movementController;
     private bool isDead;
 
+    public bool isInputBlocked = false;
+
     void Start()
     {
         orbStash = gameObject.GetComponent<OrbStash>();
@@ -39,10 +41,20 @@ public class SpellController : MonoBehaviour
     void Update()
     {
         isDead = movementController.IsDead();
-        if (Input.GetKeyDown("space") && isDead==false)
+        if (Input.GetKeyDown("space") && isDead == false && isInputBlocked==false)
         {
             InvokeSpell();
         }
+    }
+
+    public void BlockInput()
+    {
+        isInputBlocked = true;
+    }
+
+    public void UnblockInput()
+    {
+        isInputBlocked = false;
     }
 
     void InvokeSpell()

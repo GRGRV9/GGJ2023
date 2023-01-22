@@ -11,6 +11,9 @@ public class WinTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             introScript.WinLevel();
+            collision.GetComponent<MovementController>().BlockInput();
+            collision.GetComponent<MovementController>().startSpeed = 0;
+            collision.GetComponent<SpellController>().BlockInput();
         }
     }
 }

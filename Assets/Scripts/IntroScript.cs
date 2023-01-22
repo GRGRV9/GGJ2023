@@ -10,6 +10,7 @@ public class IntroScript : MonoBehaviour
     public GameObject Training2UI;
     public GameObject Training3UI;
     public GameObject WinGameUI;
+    public GameObject character;
 
     private int training1Completed;
     private int training2Completed;
@@ -78,16 +79,19 @@ public class IntroScript : MonoBehaviour
     {
         Debug.Log("Win!");
         WinGameUI.SetActive(true);
-        Time.timeScale = 0;
     }
 
     IEnumerator Intro()
     {
         Debug.Log("Intro");
+        character.GetComponent<MovementController>().BlockInput();
+        character.GetComponent<SpellController>().BlockInput();
         iceWall.GetComponent<IceWall>().BreakIcewall();
         yield return new WaitForSeconds(2);
         introCamera.SetActive(false);
         charCamera.SetActive(true);
+        character.GetComponent<MovementController>().UnblockInput();
+        character.GetComponent<SpellController>().UnblockInput();
     }
 
     IEnumerator Training1()
