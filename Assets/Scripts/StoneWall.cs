@@ -37,4 +37,9 @@ public class StoneWall : MonoBehaviour
         Debug.Log("icewall deactivated");
         audioSource.Play();
     }
+
+    public bool isWallActive()
+    {
+        return isActive;
+    }
 }

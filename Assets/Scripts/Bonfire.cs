@@ -44,4 +44,9 @@ public class Bonfire : MonoBehaviour
         Debug.Log("bonfire deactivated");
         audioSource.Play();
     }
+
+    public bool isBonfireActive()
+    {
+        return isActive;
+    }
 }

@@ -133,6 +133,7 @@ public class SpellController : MonoBehaviour
     void IceIceIce()
     {
         movementController.Dash();
+        introScript.StopTraining3();
     }
 
     void EarthEarthEarth()
