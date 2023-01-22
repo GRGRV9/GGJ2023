@@ -9,6 +9,7 @@ public class IntroScript : MonoBehaviour
     public GameObject Training1UI;
     public GameObject Training2UI;
     public GameObject Training3UI;
+    public GameObject WinGameUI;
 
     private int training1Completed;
     private int training2Completed;
@@ -25,6 +26,7 @@ public class IntroScript : MonoBehaviour
         charCamera.SetActive(false);
         Training1UI.SetActive(false);
         Training2UI.SetActive(false);
+        WinGameUI.SetActive(false);
 
         training1Completed = PlayerPrefs.GetInt("Training1");
         training2Completed = PlayerPrefs.GetInt("Training2");
@@ -70,6 +72,12 @@ public class IntroScript : MonoBehaviour
         Time.timeScale = 1;
         PlayerPrefs.SetInt("Training3", 1);
         Debug.Log("Training3 Completed");
+    }
+
+    public void WinLevel()
+    {
+        WinGameUI.SetActive(true);
+        Time.timeScale = 0;
     }
 
     IEnumerator Intro()

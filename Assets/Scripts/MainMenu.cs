@@ -6,23 +6,31 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject gameobject;
+    int currentSceneIndex;
 
-    IEnumerator Fade()
+
+    IEnumerator Fade(int scene)
     {
         gameobject.SetActive(false);
         yield return new WaitForSeconds(1);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene);
     }
 
     public void NewGame()
     {   
-        StartCoroutine(Fade());
+        StartCoroutine(Fade(1));
         
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void NextLevel()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(Fade(currentSceneIndex++));
     }
 }
