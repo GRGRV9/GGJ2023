@@ -2218,6 +2218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450711794}
   - component: {fileID: 450711795}
+  - component: {fileID: 450711796}
   m_Layer: 0
   m_Name: WinTrigger
   m_TagString: Untagged
@@ -2256,6 +2257,19 @@ CapsuleCollider2D:
   m_Offset: {x: 1.7295532, y: 0.7982545}
   m_Size: {x: 3.9591064, y: 6.0223513}
   m_Direction: 0
+--- !u!114 &450711796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450711793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0f917ada9ff8d4c8b77941f8cb9448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introScript: {fileID: 1659317697}
 --- !u!1001 &461755554
 PrefabInstance:
   m_ObjectHideFlags: 0
