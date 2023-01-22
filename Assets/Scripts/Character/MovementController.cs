@@ -54,30 +54,7 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        if (isDead == false)
-        {
-            if (Input.GetKeyDown("s") && isInputBlocked ==false)
-            {
-                moveSpeed = 0f;
-                print(moveSpeed);
-            }
 
-            if (Input.GetKeyUp("s") && isInputBlocked == false)
-            {
-                moveSpeed = startSpeed;
-                print(moveSpeed);
-            }
-
-            if (Input.GetKeyUp("d") && isInputBlocked == false)
-            {
-                Dying();
-            }
-
-            if (Input.GetKeyUp("j") && isInputBlocked == false)
-            {
-                Jumping();
-            }
-        }
     }
 
     public void OnCollisionStay2D(Collision2D collision)
