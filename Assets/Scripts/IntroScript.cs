@@ -11,6 +11,7 @@ public class IntroScript : MonoBehaviour
     public GameObject Training3UI;
     public GameObject WinGameUI;
     public GameObject character;
+    public GameObject mainMusic;
 
     private int training1Completed;
     private int training2Completed;
@@ -28,6 +29,7 @@ public class IntroScript : MonoBehaviour
         Training1UI.SetActive(false);
         Training2UI.SetActive(false);
         WinGameUI.SetActive(false);
+        mainMusic.SetActive(true);
 
         training1Completed = PlayerPrefs.GetInt("Training1");
         training2Completed = PlayerPrefs.GetInt("Training2");
@@ -79,6 +81,7 @@ public class IntroScript : MonoBehaviour
     {
         Debug.Log("Win!");
         WinGameUI.SetActive(true);
+        mainMusic.SetActive(false);
     }
 
     IEnumerator Intro()

@@ -18,6 +18,7 @@ public class MovementController : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject training1Screen;
     public GameObject training2Screen;
+    public GameObject mainMusic;
 
     private bool isInputBlocked = false;
 
@@ -52,11 +53,6 @@ public class MovementController : MonoBehaviour
         isInputBlocked = false;
     }
 
-    private void Update()
-    {
-
-    }
-
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -69,6 +65,7 @@ public class MovementController : MonoBehaviour
 
     public void Dying()
     {
+        mainMusic.SetActive(false);
         moveSpeed = 0.01f;
         isDead = true;
         animator.SetBool("isDead", isDead);
