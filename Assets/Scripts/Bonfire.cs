@@ -29,8 +29,8 @@ public class Bonfire : MonoBehaviour
             if (isActive)
             {
                 Destroy(collision.gameObject);
-            }
-            BreakBonfire();                      
+                BreakBonfire();
+            }               
         }
         
     }

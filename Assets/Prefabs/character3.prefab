@@ -752,6 +752,7 @@ MonoBehaviour:
   rockPrefab: {fileID: 7823629515744424569, guid: 422c48765c8a3c840bf81e3fa15cc4be, type: 3}
   geyserPrefab: {fileID: 4556554412481141552, guid: 8f533aba425717e4e81b41c3d44a3c77, type: 3}
   introScript: {fileID: 0}
+  isInputBlocked: 0
 --- !u!82 &1382704991741231076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -764,7 +765,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ba071863605d11e4a813145e8cb5ef19, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.431
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 0
   Mute: 0

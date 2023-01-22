@@ -26,8 +26,8 @@ public class StoneWall : MonoBehaviour
             if (isActive)
             {
                 Destroy(collision.gameObject);
-            }
-            BreakStonewall();                    
+                BreakStonewall();
+            }                           
         }
     }
     public void BreakStonewall()

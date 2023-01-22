@@ -19,7 +19,7 @@ public class MovementController : MonoBehaviour
     public GameObject training1Screen;
     public GameObject training2Screen;
 
-    bool isInputBlocked = false;
+    private bool isInputBlocked = false;
 
     void Start()
     {

@@ -26,8 +26,8 @@ public class IceWall : MonoBehaviour
             if (isActive)
             {
                 Destroy(collision.gameObject);
-            }
-            BreakIcewall();            
+                BreakIcewall();
+            }                    
         }
 
     }
