@@ -21,21 +21,21 @@ public class OrbStash : MonoBehaviour
     void Update()
     {
         isDead = movementController.IsDead();
-        if (Input.GetKeyDown("q") && isDead==false)
+        if (Input.GetKeyDown("e") && isDead==false)
         {
             orbStash[2] = orbStash[1];
             orbStash[1] = orbStash[0];
             orbStash[0] = "Fire";
             audioSource.Play();
         }
-        else if (Input.GetKeyDown("w") && isDead == false) 
+        else if (Input.GetKeyDown("q") && isDead == false) 
         {
             orbStash[2] = orbStash[1];
             orbStash[1] = orbStash[0];
             orbStash[0] = "Ice";
             audioSource.Play();
         }
-        else if (Input.GetKeyDown("e") && isDead == false)
+        else if (Input.GetKeyDown("w") && isDead == false)
         {
             orbStash[2] = orbStash[1];
             orbStash[1] = orbStash[0];
